@@ -85,7 +85,34 @@
       <p class="eyebrow">HAGAMOS EL CAMBIO</p>
       <h2>Elige con conciencia.<br><em>Inspira el cambio.</em></h2>
       <p>Conoce más sobre RaízWeb y nuestra propuesta de bolsas de origen vegetal.</p>
-      <a class="button button-light" href="mailto:raizweb@example.com?subject=Quiero%20conocer%20Ra%C3%ADzWeb">Escríbenos <span>↗</span></a>
+      <a class="button button-light" href="mailto:raizweb@example.com?subject=Quiero%20conocer%20Ra%C3%ADzWeb">Escríbenos<span>↗</span></a>
+    
+<div class="formulario-interes">
+  <h3>¡Nos interesa tu opinión!</h3>
+  <p>Cuéntanos si te gustaría conocer más sobre nuestras bolsas vegetales.</p>
+
+  <form id="formulario-interes">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" required>
+
+    <label for="interes-producto">¿Te interesan nuestras bolsas?</label>
+    <select id="interes-producto" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+    </select>
+
+    <label for="motivo">¿Por qué te interesa?</label>
+    <textarea id="motivo"></textarea>
+
+    <button type="submit">Enviar respuestas</button>
+  </form>
+
+  <p id="mensaje"></p>
+</div>
     </section>
   </main>
 
