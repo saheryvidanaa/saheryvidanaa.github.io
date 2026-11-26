@@ -1,13 +1,444 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* FORMULARIO DE INTERES RAIZWEB */
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f2;
+  color: #263b2b;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #f8f8f2;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #315b3b;
+}
+
+.logo-mark {
+  background: #315b3b;
+  color: white;
+  padding: 8px 13px;
+  border-radius: 50%;
+}
+
+.logo span:last-child {
+  color: #829b65;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #77965b;
+}
+
+.nav-cta {
+  background: #315b3b;
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 30px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 23px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ===== PORTADA ===== */
+.hero {
+  min-height: 570px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 70px 10%;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: #77965b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.12;
+  color: #263b2b;
+}
+
+em {
+  color: #78965e;
+}
+
+.hero-text {
+  max-width: 470px;
+  margin: 25px 0;
+  color: #687467;
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #315b3b;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #203f29;
+  transform: translateY(-3px);
+}
+
+.button span {
+  margin-left: 12px;
+}
+
+.hero-note {
+  margin-top: 25px;
+  color: #82917b;
+  font-size: 13px;
+}
+
+/* ===== ILUSTRACIÓN DE BOLSA ===== */
+.hero-art {
+  min-height: 400px;
+  background: #e6ebd9;
+  border-radius: 48% 48% 20px 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #d0dba9;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
+
+.bag {
+  width: 210px;
+  height: 240px;
+  background: #bdc49b;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  font-size: 35px;
+  color: #315b3b;
+  transform: rotate(-5deg);
+  box-shadow: 15px 20px 30px #71815b33;
+}
+
+.bag-handle {
+  width: 90px;
+  height: 65px;
+  border: 12px solid #a5b184;
+  border-bottom: none;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  top: -60px;
+}
+
+.bag small {
+  font-size: 17px;
+}
+
+.leaf {
+  position: absolute;
+  background: #78965e;
+  width: 65px;
+  height: 110px;
+  border-radius: 100% 0 100% 0;
+  opacity: .8;
+}
+
+.leaf-one {
+  bottom: 55px;
+  left: 50px;
+  transform: rotate(-35deg);
+}
+
+.leaf-two {
+  top: 65px;
+  left: 80px;
+  transform: rotate(45deg);
+  background: #9aab75;
+}
+
+.art-caption {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #315b3b;
+}
+
+/* ===== SECCIONES ===== */
+.section-pad {
+  padding: 100px 10%;
+}
+
+.intro {
+  background: #edf0e6;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+}
+
+.intro-grid p,
+.section-heading > p,
+.commitment-copy > p {
+  color: #687467;
+  font-size: 16px;
+}
+
+/* ===== PRODUCTOS ===== */
+.product {
+  background: #f8f8f2;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.section-heading > p {
+  max-width: 300px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  padding: 35px;
+  border-radius: 18px;
+  min-height: 330px;
+}
+
+.product-card-main {
+  background: #e8eddd;
+}
+
+.product-card-soft {
+  background: #f0eadb;
+}
+
+.product-card-dark {
+  background: #315b3b;
+  color: white;
+}
+
+.card-number {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin: 30px 0 12px;
+  color: #78965e;
+  font-weight: bold;
+}
+
+.product-card-dark .card-number {
+  color: #c7d7a8;
+}
+
+.product-card h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.product-card > p:last-child {
+  font-size: 14px;
+  color: #687467;
+}
+
+.product-card-dark > p:last-child {
+  color: #e0e8d9;
+}
+
+.mini-bag {
+  width: 75px;
+  height: 85px;
+  background: #bdc49b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #315b3b;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.mini-handle {
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  border: 5px solid #9ba77b;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  top: -24px;
+}
+
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  background: #dce3cb;
+  color: #315b3b;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+/* ===== COMPROMISO ===== */
+.commitment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: #edf0e6;
+}
+
+.commitment-art {
+  min-height: 350px;
+  background: #dce5ce;
+  border-radius: 50% 50% 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.big-leaf {
+  width: 130px;
+  height: 220px;
+  background: #78965e;
+  border-radius: 100% 0 100% 0;
+  transform: rotate(35deg);
+}
+
+.circle-text {
+  position: absolute;
+  bottom: 25px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #315b3b;
+}
+
+.commitment-copy ul {
+  margin: 25px 0 0 20px;
+  color: #52634f;
+}
+
+.commitment-copy li {
+  margin: 12px 0;
+}
+
+/* ===== CONTACTO ===== */
+.contact {
+  background: #315b3b;
+  color: white;
+  text-align: center;
+}
+
+.contact .eyebrow {
+  color: #c4d69f;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact h2 em {
+  color: #c4d69f;
+}
+
+.contact > p:not(.eyebrow) {
+  color: #e1e9dc;
+  margin-bottom: 25px;
+}
+
+.button-light {
+  background: #e3e9d8;
+  color: #315b3b;
+}
+
+.button-light:hover {
+  background: white;
+}
+
+/* ===== FORMULARIO ===== */
 .formulario-interes {
   max-width: 600px;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
   padding: 30px;
   background: #f3f5ec;
   border-radius: 16px;
   color: #263b2b;
+  text-align: left;
 }
 
 .formulario-interes h3 {
@@ -38,7 +469,6 @@
   border: 1px solid #b5c3ad;
   border-radius: 8px;
   font: inherit;
-  box-sizing: border-box;
 }
 
 .formulario-interes textarea {
@@ -64,4 +494,91 @@
 #mensaje {
   font-weight: bold;
   margin-top: 15px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.footer {
+  padding: 40px 10%;
+  background: #203f29;
+  color: white;
+  text-align: center;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  color: #dce5ce;
+}
+
+.footer small {
+  color: #b9c7ad;
+}
+
+/* ===== DISEÑO RESPONSIVO ===== */
+@media (max-width: 800px) {
+  .site-header {
+    padding: 18px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: #f8f8f2;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7%;
+  }
+
+  .hero-art {
+    min-height: 330px;
+  }
+
+  .intro-grid,
+  .commitment {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .section-pad {
+    padding: 65px 7%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .formulario-interes {
+    padding: 20px;
+  }
 }
